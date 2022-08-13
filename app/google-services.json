@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "968181175561",
+    "project_id": "bancos-f94b0",
+    "storage_bucket": "bancos-f94b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968181175561:android:e6e256e16e13fd8de92fd8",
+        "android_client_info": {
+          "package_name": "com.example.bancos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968181175561-8sulac8skbaa64so6krrc20rjf7m016d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEaYMCaCksRycfYO1S0KvKKN0b2qqAFd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968181175561-8sulac8skbaa64so6krrc20rjf7m016d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
