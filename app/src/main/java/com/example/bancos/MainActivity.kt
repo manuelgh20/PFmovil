@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun haceRegister() {
         val email=binding.etEmail.text.toString()
-        val clave=binding.etEmail.text.toString()
+        val clave=binding.etClave.text.toString()
 
         //se hace registro
         auth.createUserWithEmailAndPassword(email,clave)
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun haceLogin() {
         val email=binding.etEmail.text.toString()
-        val clave=binding.etEmail.text.toString()
+        val clave=binding.etClave.text.toString()
 
         //se hace registro
         auth.signInWithEmailAndPassword(email,clave)
@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                     actualiza(user)
                 }else {
                     Log.d("Autenticando", "faail")
+                    val user = auth.currentUser
                     Toast.makeText(baseContext,"fallo",Toast.LENGTH_LONG).show()
                     actualiza(null)
 
