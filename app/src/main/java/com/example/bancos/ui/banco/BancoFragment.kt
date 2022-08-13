@@ -1,4 +1,4 @@
-package com.example.bancos.ui.home
+package com.example.bancos.ui.banco
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.bancos.databinding.FragmentHomeBinding
+import com.example.bancos.databinding.FragmentBancoBinding
 
-class HomeFragment : Fragment() {
+import com.example.bancos.viewmodel.BancoViewModel
 
-    private var _binding: FragmentHomeBinding? = null
+class BancoFragment : Fragment() {
+
+    private var _binding: FragmentBancoBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +24,14 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val bancoViewModel =
+            ViewModelProvider(this).get(BancoViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentBancoBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        bancoViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
