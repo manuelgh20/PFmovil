@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Manuel/Desktop/PFmovil/PFmovil/app/src/main/res/layout/banco_fila.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Manuel/Desktop/PFmovil/PFmovil/app/src/main/res/layout/fragment_add_banco.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Manuel/Desktop/PFmovil/PFmovil/app/src/main/res/layout/fragment_add_ingresar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Manuel/Desktop/PFmovil/PFmovil/app/src/main/res/layout/fragment_banco.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Manuel/Desktop/PFmovil/PFmovil/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="..\:/Users/Manuel/Desktop/PFmovil/PFmovil/app/src/main/res/menu/principal.xml" value="0.13518518518518519" />
         <entry key="..\:/Users/Manuel/Documents/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.365625" />
