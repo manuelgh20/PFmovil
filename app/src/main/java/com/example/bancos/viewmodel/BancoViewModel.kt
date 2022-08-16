@@ -20,15 +20,15 @@ class BancoViewModel(application: Application) : AndroidViewModel(application) {
         getAllData=repository.getAllData
     }
 
-    fun addLugar(banco: Banco){
+    fun addBanco(banco: Banco){
         viewModelScope.launch (Dispatchers.IO){repository.addBanco(banco)  }
     }
 
-    fun updateLugar(banco: Banco){
+    fun updateBanco(banco: Banco){
         viewModelScope.launch (Dispatchers.IO){repository.updateBanco(banco)  }
     }
 
-    fun deleteLugar(banco: Banco){
+    fun deleteBanco(banco: Banco){
         viewModelScope.launch (Dispatchers.IO){repository.deleteBanco(banco)  }
     }
 }

@@ -9,7 +9,14 @@
         android:id="@+id/nav_banco"
         android:name="com.example.bancos.ui.banco.BancoFragment"
         android:label="@string/menu_banco"
-        tools:layout="@layout/fragment_banco" />
+        tools:layout="@layout/fragment_banco" >
+        <action
+            android:id="@+id/action_nav_banco_to_addBancoFragment"
+            app:destination="@id/addBancoFragment" />
+        <action
+            android:id="@+id/action_nav_banco_to_addIngresarFragment"
+            app:destination="@id/addIngresarFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +29,22 @@
         android:name="com.example.bancos.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addBancoFragment"
+        android:name="com.example.bancos.ui.banco.AddBancoFragment"
+        android:label="fragment_add_banco"
+        tools:layout="@layout/fragment_add_banco" >
+        <action
+            android:id="@+id/action_addBancoFragment_to_nav_banco"
+            app:destination="@id/nav_banco" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIngresarFragment"
+        android:name="com.example.bancos.ui.banco.AddIngresarFragment"
+        android:label="fragment_add_ingresar"
+        tools:layout="@layout/fragment_add_ingresar" >
+        <action
+            android:id="@+id/action_addIngresarFragment_to_nav_banco"
+            app:destination="@id/nav_banco" />
+    </fragment>
 </navigation>
