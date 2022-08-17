@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_nav_banco_to_addIngresarFragment"
             app:destination="@id/addIngresarFragment" />
+        <action
+            android:id="@+id/action_nav_banco_to_updateBancoFragment"
+            app:destination="@id/updateBancoFragment" />
     </fragment>
 
     <fragment
@@ -32,7 +35,7 @@
     <fragment
         android:id="@+id/addBancoFragment"
         android:name="com.example.bancos.ui.banco.AddBancoFragment"
-        android:label="fragment_add_banco"
+        android:label="@string/bt_agregar"
         tools:layout="@layout/fragment_add_banco" >
         <action
             android:id="@+id/action_addBancoFragment_to_nav_banco"
@@ -41,10 +44,22 @@
     <fragment
         android:id="@+id/addIngresarFragment"
         android:name="com.example.bancos.ui.banco.AddIngresarFragment"
-        android:label="fragment_add_ingresar"
+        android:label="@string/bt_agregar"
         tools:layout="@layout/fragment_add_ingresar" >
         <action
             android:id="@+id/action_addIngresarFragment_to_nav_banco"
             app:destination="@id/nav_banco" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateBancoFragment"
+        android:name="com.example.bancos.ui.banco.UpdateBancoFragment"
+        android:label="@string/bt_actualizar"
+        tools:layout="@layout/fragment_update_banco" >
+        <action
+            android:id="@+id/action_updateBancoFragment_to_nav_banco"
+            app:destination="@id/nav_banco" />
+        <argument
+            android:name="banco"
+            app:argType="com.example.bancos.model.Banco" />
     </fragment>
 </navigation>

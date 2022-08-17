@@ -24,6 +24,14 @@
     <string name="msg_ncuenta">Cuenta</string>
     <string name="msg_seguridad">Codigo de Seguridad</string>
     <string name="bt_agregar">Agregar Cuenta</string>
+    <string name="bt_actualizar">Actualizar Cuenta</string>
+
+
     <string name="msg_agregado">Insertado con exito</string>
+    <string name="msg_actualizado">Actualizado</string>
+    <string name="menu_delete">Eliminar</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="msg_segurro_borrar">Seguro desea eliminarlo </string>
 
 </resources>
