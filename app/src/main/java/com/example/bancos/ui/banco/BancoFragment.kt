@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bancos.R
+import com.example.bancos.adapter.BancoAdapter
 import com.example.bancos.databinding.FragmentAddBancoBinding
 import com.example.bancos.databinding.FragmentBancoBinding
 
@@ -29,7 +31,16 @@ class BancoFragment : Fragment() {
          binding.addLugarFabButton.setOnClickListener {
              findNavController().navigate(R.id.action_nav_banco_to_addBancoFragment)
          }
-             return binding.root
+
+        val bancoAdapter=BancoAdapter()
+        val reciclador=binding.reciclador
+        reciclador.adapter =bancoAdapter
+        reciclador.layoutManager = LinearLayoutManager(requireContext())
+
+        bancoViewModel= ViewModelProvider(this)[BancoViewModel::class.java]
+        bancoViewModel.getAllData.observe(viewLifecycleOwner){lugares -> bancoAdapter.setdata(lugares)}
+
+        return binding.root
     }
     override fun onDestroy() {
         super.onDestroy()
