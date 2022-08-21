@@ -52,7 +52,7 @@ class UpdateBancoFragment : Fragment() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId ==R.id.menu_delete) {
-            deleteLugar()
+            deleteBanco()
         }
         return super.onOptionsItemSelected(item)
     }
@@ -72,7 +72,7 @@ class UpdateBancoFragment : Fragment() {
 
     }
 
-    private fun deleteLugar(){
+    private fun deleteBanco(){
         val builder= AlertDialog.Builder(requireContext())
         builder.setPositiveButton(getString(R.string.si)){_,_ ->
             bancoViewModel.deleteBanco(args.banco)
