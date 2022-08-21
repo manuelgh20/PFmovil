@@ -38,7 +38,7 @@ class BancoFragment : Fragment() {
         reciclador.layoutManager = LinearLayoutManager(requireContext())
 
         bancoViewModel= ViewModelProvider(this)[BancoViewModel::class.java]
-        bancoViewModel.getAllData.observe(viewLifecycleOwner){lugares -> bancoAdapter.setdata(lugares)}
+        bancoViewModel.getAllData.observe(viewLifecycleOwner){bancos -> bancoAdapter.setdata(bancos)}
 
         return binding.root
     }

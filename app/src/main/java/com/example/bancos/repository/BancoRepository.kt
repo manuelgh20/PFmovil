@@ -1,19 +1,20 @@
 package com.example.bancos.repository
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.bancos.data.BancoDao
 import com.example.bancos.model.Banco
 
 class BancoRepository (private val bancoDao: BancoDao) {
 
-    val getAllData: LiveData<List<Banco>> = bancoDao.getAllData()
+    val getAllData: MutableLiveData<List<Banco>> = bancoDao.getBancos()
 
     suspend fun addBanco(banco: Banco){
-        bancoDao.addBanco(banco)
+        bancoDao.saveBanco(banco)
     }
 
     suspend fun updateBanco(banco: Banco){
-        bancoDao.updateBanco(banco)
+        bancoDao.saveBanco(banco)
     }
 
     suspend fun deleteBanco(banco: Banco){

@@ -40,7 +40,7 @@ class AddBancoFragment : Fragment() {
         val telefono=binding.etTelefono.text.toString()
         val cuenta=binding.etCuenta.text.toString()
         val codigo=binding.etCodigo.text.toString()
-        val banco= Banco(0,cedula,nombre,correo,telefono,cuenta,codigo)
+        val banco= Banco("",cedula,nombre,correo,telefono,cuenta,codigo)
         bancoViewModel.addBanco(banco)
         Toast.makeText(requireContext(),getString(R.string.msg_agregado),Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_addBancoFragment_to_nav_banco)
